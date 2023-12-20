@@ -1,15 +1,23 @@
-import { ref, computed } from "vue";
+import { ref } from "vue";
 import { defineStore } from "pinia";
-import { useStorage } from "@vueuse/core";
+import MainMenu from "@components/MainMenu.vue";
+import SettingsMenu from "@components/SettingsMenu.vue";
+import GameScreen from "@components/GameScreen.vue";
 
-export const useAppState = defineStore("counter", {
+export const useAppState = defineStore("app-state", {
   state: () => {
-    return { count: useStorage("counter", 0) };
+    return { screen: ref(MainMenu) };
   },
 
   actions: {
-    increment() {
-      this.count++;
+    toSettings() {
+      this.screen = SettingsMenu;
+    },
+    toMainMenu() {
+      this.screen = MainMenu;
+    },
+    toGameScreen() {
+      this.screen = GameScreen;
     },
   },
 });

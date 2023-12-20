@@ -8,5 +8,6 @@ import { useGameInstanceState } from "@/stores/run-instance-state";
     <h2>Counter: {{ useGameInstanceState().count }}</h2>
     <button class="btn btn-primary" @click="useGameInstanceState().increment()">Increment</button>
     <button class="btn btn-accent" @click="useGameInstanceState().reset()">Reset</button>
+    <button class="btn btn-error" @click="useGameInstanceState().reset()">Test</button>
   </div>
 </template>

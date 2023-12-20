@@ -11,7 +11,8 @@
   "dependencies": {
     "@vueuse/core": "^10.7.0",
     "pinia": "^2.1.7",
-    "vue": "^3.3.10"
+    "vue": "^3.3.10",
+    "xstate": "^5.3.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.1",
